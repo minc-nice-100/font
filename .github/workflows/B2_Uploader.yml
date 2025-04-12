@@ -62,10 +62,8 @@ jobs:
         for root, _, files in os.walk('upload_dir'):
             for file in files:
                 file_path = os.path.join(root, file)
-                relative_path = os.path.relpath(file_path, 'upload_dir')
-                print(f'Uploading file: {relative_path}...')
+                relative_path = os.path.relpath(file_path, 'upload_dir')                
                 bucket.upload_local_file(local_file=file_path, file_name=relative_path)
-                print(f'Uploaded file: {relative_path}')
         print('All files uploaded successfully.')
         "
         echo "Upload completed."
