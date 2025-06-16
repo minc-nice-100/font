@@ -3,4 +3,4 @@ compatibility_date = "2025-06-16"
 
 [assets]
 directory = "./"
-not_found_handling  = 404
+not_found_handling  = "404"
