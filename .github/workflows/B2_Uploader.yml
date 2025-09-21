@@ -82,6 +82,7 @@ jobs:
 
         echo "CORS rules updated to allow all origins."
 
+
     - name: Clean up
       run: |
         echo "Removing upload directory and temporary CORS file..."
