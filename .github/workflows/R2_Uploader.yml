@@ -11,14 +11,14 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
 
-      - name: 安装 AWS CLI
-        run: |
-          sudo apt-get update
-          sudo apt-get install unzip
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
-          sudo ./aws/install
-          rm -rf aws awscliv2.zip
+      # - name: 安装 AWS CLI
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install unzip
+      #     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      #     unzip awscliv2.zip
+      #     sudo ./aws/install
+      #     rm -rf aws awscliv2.zip
 
       - name: 同步文件到 Cloudflare R2
         env:
